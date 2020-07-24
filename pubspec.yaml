@@ -1,0 +1,9 @@
+name: deckforge
+
+environment:
+  sdk: '>=2.6.0 <3.0.0'
+
+dependencies:
+  args: ^1.5.0
+  dio: ^3.0.0
+  io: ^0.3.4
