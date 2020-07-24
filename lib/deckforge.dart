@@ -29,36 +29,31 @@ void main(List<String> arguments) async {
 
 void parseDeck(String deckId) async {
   if (guidRegex.hasMatch(deckId)) {
+  
     // retrieve deck
     Deck deck = await deckRetriever.loadDeck(deckId);
 
+    // deck name
     print(wrapWith(deck.name, [green, styleBold]));
 
-    // analyze it
+    // analyze and print some stat
     deckAnalyzer.analyze(deck);
-    // getting some stats
-    Stat amberBonus = deck.getStatByKey(StatsKeys.amberBonus);
-    print(amberBonus.description +
-        ' ' +
-        wrapWith(amberBonus.valueString, [yellow, styleBold]));
-
-    Stat creaturesNumber = deck.getStatByKey(StatsKeys.creatures);
-    print(creaturesNumber.description +
-        ' ' +
-        wrapWith(creaturesNumber.valueString, [blue, styleBold]));
-
-    Stat creaturesPower = deck.getStatByKey(StatsKeys.creaturesPower);
-    print(creaturesPower.description +
-        ' ' +
-        wrapWith(creaturesPower.valueString, [red, styleBold]));
-
-    Stat creaturesArmor = deck.getStatByKey(StatsKeys.creaturesArmor);
-    print(creaturesArmor.description +
-        ' ' +
-        wrapWith(creaturesArmor.valueString, [darkGray, styleBold]));
+    printStat(deck, StatsKeys.amberBonus, [yellow, styleBold]);
+    printStat(deck, StatsKeys.creatures, [green, styleBold]);
+    printStat(deck, StatsKeys.creaturesPower, [red, styleBold]);
+    printStat(deck, StatsKeys.creaturesArmor, [darkGray, styleBold]);
+    printStat(deck, StatsKeys.actions, [lightGray, styleBold]);
+    printStat(deck, StatsKeys.artifacts, [blue, styleBold]);
 
     print('');
   } else {
     print('Deck id format not valid, skipping');
   }
+}
+
+void printStat (Deck deck, StatsKeys key, Iterable<AnsiCode> styles) {
+    Stat stat = deck.getStatByKey(key);
+    print(stat.description +
+        ' ' +
+        wrapWith(stat.valueString, styles));
 }
