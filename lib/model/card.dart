@@ -61,7 +61,7 @@ class Card {
       case 'Creature':
         cardType = CardsTypes.creature;
         break;
-      case 'Updrade':
+      case 'Upgrade':
         cardType = CardsTypes.upgrade;
         break;
       case 'Action':
