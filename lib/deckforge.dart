@@ -44,6 +44,7 @@ void parseDeck(String deckId) async {
     printStat(deck, StatsKeys.creaturesArmor, [darkGray, styleBold]);
     printStat(deck, StatsKeys.actions, [lightGray, styleBold]);
     printStat(deck, StatsKeys.artifacts, [blue, styleBold]);
+    printStat(deck, StatsKeys.upgrades, [lightRed, styleBold]);
 
     print('');
   } else {

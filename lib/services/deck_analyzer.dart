@@ -5,6 +5,7 @@ import 'package:deckforge/analyzer/artifacts.dart';
 import 'package:deckforge/analyzer/creatures.dart';
 import 'package:deckforge/analyzer/creatures_power.dart';
 import 'package:deckforge/analyzer/creatures_armor.dart';
+import 'package:deckforge/analyzer/upgrades.dart';
 
 class DeckAnalyzer {
   DeckAnalyzer() {}
@@ -16,5 +17,6 @@ class DeckAnalyzer {
     deck.stats.add(CreaturesArmor().parse(deck));
     deck.stats.add(Actions().parse(deck));
     deck.stats.add(Artifacts().parse(deck));
+    deck.stats.add(Upgrades().parse(deck));
   }
 }
