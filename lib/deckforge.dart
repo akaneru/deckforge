@@ -29,7 +29,6 @@ void main(List<String> arguments) async {
 
 void parseDeck(String deckId) async {
   if (guidRegex.hasMatch(deckId)) {
-  
     // retrieve deck
     Deck deck = await deckRetriever.loadDeck(deckId);
 
@@ -52,9 +51,7 @@ void parseDeck(String deckId) async {
   }
 }
 
-void printStat (Deck deck, StatsKeys key, Iterable<AnsiCode> styles) {
-    Stat stat = deck.getStatByKey(key);
-    print(stat.description +
-        ' ' +
-        wrapWith(stat.valueString, styles));
+void printStat(Deck deck, StatsKeys key, Iterable<AnsiCode> styles) {
+  Stat stat = deck.getStatByKey(key);
+  print(stat.description + ' ' + wrapWith(stat.valueString, styles));
 }
