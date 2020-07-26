@@ -11,7 +11,7 @@ class Actions extends Characteristic implements Analyzer {
     Stat stat = Stat(
         key: StatsKeys.actions,
         name: 'Actions cards number',
-        description: 'Numbers of actions cards');
+        description: 'Number of actions cards');
     for (var card in deck.cards) {
       if (card.cardType == CardsTypes.action) {
         stat.valueInt++;

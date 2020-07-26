@@ -11,7 +11,7 @@ class Artifacts extends Characteristic implements Analyzer {
     Stat stat = Stat(
         key: StatsKeys.artifacts,
         name: 'Artifacts cards number',
-        description: 'Numbers of artifacts cards');
+        description: 'Number of artifacts cards');
     for (var card in deck.cards) {
       if (card.cardType == CardsTypes.artifact) {
         stat.valueInt++;

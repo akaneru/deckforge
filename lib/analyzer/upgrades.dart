@@ -11,7 +11,7 @@ class Upgrades extends Characteristic implements Analyzer {
     Stat stat = Stat(
         key: StatsKeys.upgrades,
         name: 'Upgrades cards number',
-        description: 'Numbers of upgrades cards');
+        description: 'Number of upgrades cards');
     for (var card in deck.cards) {
       if (card.cardType == CardsTypes.upgrade) {
         stat.valueInt++;

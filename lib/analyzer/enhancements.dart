@@ -3,17 +3,16 @@ import 'package:deckforge/analyzer/characteristic.dart';
 import 'package:deckforge/model/stat.dart';
 import 'package:deckforge/model/deck.dart';
 import 'package:deckforge/static/stats_keys.dart';
-import 'package:deckforge/static/cards_types.dart';
 
-class Creatures extends Characteristic implements Analyzer {
+class Enhancements extends Characteristic implements Analyzer {
   @override
   Stat parse(Deck deck) {
     Stat stat = Stat(
-        key: StatsKeys.creatures,
-        name: 'Creatures cards number',
-        description: 'Number of creatures cards');
+        key: StatsKeys.enhanced,
+        name: 'Enhanced cards number',
+        description: 'Number of enhanced cards');
     for (var card in deck.cards) {
-      if (card.cardType == CardsTypes.creature) {
+      if (card.isEnhanced) {
         stat.valueInt++;
         addCardToStat(stat, card);
       }
