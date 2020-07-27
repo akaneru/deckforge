@@ -29,6 +29,9 @@ import 'package:deckforge/services/deck_analyzer.dart';
   Deck deck = await deckRetriever.loadDeck(deckId);
   deckAnalyzer.analyze(deck);
 
+  // to something with deck object and deck.stats data
+  // ...
+
 ...
 
 ```
@@ -36,4 +39,4 @@ import 'package:deckforge/services/deck_analyzer.dart';
 ## Todo
 
 - finish all analyzer for stats
-- other feature (work in progress)
+- other features (work in progress)
