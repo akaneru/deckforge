@@ -3,9 +3,14 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:deckforge/configs.dart';
 import 'package:deckforge/model/deck.dart';
+import 'package:deckforge/services/expansions_retriever.dart';
 
 class DeckRetriever {
-  DeckRetriever() {}
+  ExpansionRetriever expansionRetriever;
+
+  DeckRetriever() {
+    expansionRetriever = ExpansionRetriever();
+  }
 
   Future<Deck> loadDeck(String deckId) async {
     // deck endpoint
@@ -35,7 +40,7 @@ class DeckRetriever {
       }
 
       deck = Deck.fromJson(deckJson['data'], deckJson['_linked']['cards'],
-          deckJson['_linked']['houses']);
+          deckJson['_linked']['houses'], expansionRetriever.loadAll());
     } on Exception catch (e) {
       print(e.toString());
     }

@@ -33,7 +33,9 @@ void parseDeck(String deckId) async {
     Deck deck = await deckRetriever.loadDeck(deckId);
 
     // deck name
-    print(wrapWith(deck.name, [green, styleBold]));
+    print(wrapWith(deck.name, [green, styleBold]) +
+        ' from ' +
+        wrapWith(deck.expansion.name, [lightGreen]));
 
     // analyze and print some stat
     deckAnalyzer.analyze(deck);

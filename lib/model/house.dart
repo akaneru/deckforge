@@ -4,7 +4,7 @@ class House {
   String id;
   String name;
   String image;
-  dynamic house;
+  Houses code;
 
   House({this.id, this.name, this.image});
 
@@ -15,31 +15,31 @@ class House {
 
     switch (id) {
       case 'Dis':
-        house = Houses.dis;
+        code = Houses.dis;
         break;
       case 'Brobnar':
-        house = Houses.brobnar;
+        code = Houses.brobnar;
         break;
       case 'Shadows':
-        house = Houses.shadows;
+        code = Houses.shadows;
         break;
       case 'Sanctum':
-        house = Houses.sanctum;
+        code = Houses.sanctum;
         break;
       case 'Saurians':
-        house = Houses.saurians;
+        code = Houses.saurians;
         break;
       case 'Untamned':
-        house = Houses.untamned;
+        code = Houses.untamned;
         break;
       case 'Mars':
-        house = Houses.mars;
+        code = Houses.mars;
         break;
       case 'Star Alliance':
-        house = Houses.starAlliance;
+        code = Houses.starAlliance;
         break;
       case 'Logos':
-        house = Houses.logos;
+        code = Houses.logos;
         break;
     }
   }

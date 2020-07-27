@@ -1,4 +1,5 @@
 import 'package:deckforge/model/card.dart';
+import 'package:deckforge/model/expansion.dart';
 import 'package:deckforge/model/house.dart';
 import 'package:deckforge/model/stat.dart';
 import 'package:deckforge/static/stats_keys.dart';
@@ -6,6 +7,7 @@ import 'package:deckforge/static/stats_keys.dart';
 class Deck {
   String id;
   String name;
+  Expansion expansion;
   int expansionNumber;
   int powerLevel;
   int chains;
@@ -19,15 +21,17 @@ class Deck {
   Deck(
       {this.id,
       this.name,
+      this.expansion,
       this.expansionNumber,
       this.powerLevel,
       this.chains,
       this.wins,
       this.losses,
-      this.cards});
+      this.cards,
+      this.houses});
 
   Deck.fromJson(Map<String, dynamic> json, List<dynamic> cardList,
-      List<dynamic> houseList) {
+      List<dynamic> houseList, List<Expansion> expansions) {
     id = json['id'];
     name = json['name'];
     expansionNumber = json['expansion'];
@@ -38,6 +42,13 @@ class Deck {
 
     for (var house in houseList) {
       houses.add(House.fromJson(house));
+    }
+
+    for (var expansionItem in expansions) {
+      if (json['expansion'] == expansionItem.id) {
+        expansion = expansionItem;
+        break;
+      }
     }
 
     for (var cardId in json['_links']['cards']) {
