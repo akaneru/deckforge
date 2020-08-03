@@ -42,7 +42,7 @@ $ deckforge stats --deck 56c0328f-6ffa-49f4-9449-641f346c9a33 --deck cdbfba62-e0
 
 ```dart
 
-import 'package:deckforge/services/deck_retriever.dart';
+import 'package:deckforge/services/deck_converter.dart';
 import 'package:deckforge/services/deck_analyzer.dart';
 
 ...
