@@ -48,10 +48,12 @@ import 'package:deckforge/services/deck_analyzer.dart';
 ...
   
   String deckId = '56c0328f-6ffa-49f4-9449-641f346c9a33';
-  DeckRetriever deckRetriever = DeckRetriever();
+  DeckConverter deckConverter = DeckConverter();
   DeckAnalyzer deckAnalyzer = DeckAnalyzer();
 
-  Deck deck = await deckRetriever.loadDeck(deckId);
+  // fetch the deck in json format and convert it to an object
+  Deck deck = await deckConverter.loadDeck(deckId);
+  // analyze for stats
   deckAnalyzer.analyze(deck);
 
   // to something with deck object and deck.stats data
@@ -65,3 +67,5 @@ import 'package:deckforge/services/deck_analyzer.dart';
 
 - finish all analyzer for stats
 - download command (json and image flags, iso2 language option)
+- license (in readme and file)
+- disclaimer (in readme and file)
