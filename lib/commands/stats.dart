@@ -48,6 +48,7 @@ class StatsCommand extends Command {
           printStat(deck, StatsKeys.upgrades, [lightRed, styleBold]);
           printStat(deck, StatsKeys.enhanced, [backgroundWhite, black, styleBold]);          
           printStat(deck, StatsKeys.anomalies, [backgroundGreen, black, styleBold]);
+          printStat(deck, StatsKeys.maveriks, [backgroundLightBlue, black, styleBold]);
 
           print('');
         } else {

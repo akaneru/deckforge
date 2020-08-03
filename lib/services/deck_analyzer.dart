@@ -5,6 +5,7 @@ import 'package:deckforge/analyzer/artifacts.dart';
 import 'package:deckforge/analyzer/creatures.dart';
 import 'package:deckforge/analyzer/creatures_power.dart';
 import 'package:deckforge/analyzer/creatures_armor.dart';
+import 'package:deckforge/analyzer/maveriks.dart';
 import 'package:deckforge/analyzer/upgrades.dart';
 import 'package:deckforge/analyzer/enhancements.dart';
 import 'package:deckforge/model/deck.dart';
@@ -22,5 +23,6 @@ class DeckAnalyzer {
     deck.stats.add(Upgrades().parse(deck));
     deck.stats.add(Enhancements().parse(deck));
     deck.stats.add(Anomalies().parse(deck));
+    deck.stats.add(Maveriks().parse(deck));
   }
 }
