@@ -46,14 +46,22 @@ class StatsCommand extends Command {
           printStat(deck, StatsKeys.actions, [lightGray, styleBold]);
           printStat(deck, StatsKeys.artifacts, [blue, styleBold]);
           printStat(deck, StatsKeys.upgrades, [lightRed, styleBold]);
-          printStat(deck, StatsKeys.enhanced, [backgroundWhite, black, styleBold]);          
-          printStat(deck, StatsKeys.anomalies, [backgroundGreen, black, styleBold]);
-          printStat(deck, StatsKeys.maveriks, [backgroundLightBlue, black, styleBold]);
-          printStat(deck, StatsKeys.rarityCommon, [backgroundLightBlue, black, styleBold]);
-          printStat(deck, StatsKeys.rarityUncommon, [backgroundLightBlue, black, styleBold]);
-          printStat(deck, StatsKeys.rarityRare, [backgroundLightBlue, black, styleBold]);
-          printStat(deck, StatsKeys.raritySpecial, [backgroundLightBlue, black, styleBold]);
-          printStat(deck, StatsKeys.rarityVariant, [backgroundLightBlue, black, styleBold]);
+          printStat(
+              deck, StatsKeys.enhanced, [backgroundWhite, black, styleBold]);
+          printStat(
+              deck, StatsKeys.anomalies, [backgroundGreen, black, styleBold]);
+          printStat(deck, StatsKeys.maveriks,
+              [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityCommon,
+              [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityUncommon,
+              [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityRare,
+              [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.raritySpecial,
+              [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityVariant,
+              [backgroundLightBlue, black, styleBold]);
 
           print('');
         } else {
