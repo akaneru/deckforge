@@ -9,7 +9,7 @@ class Enhancements extends Characteristic implements Analyzer {
   Stat parse(Deck deck) {
     Stat stat = Stat(
         key: StatsKeys.enhanced,
-        name: 'Enhanced cards number',
+        name: 'Enhanced cards',
         description: 'Number of enhanced cards');
     for (var card in deck.cards) {
       if (card.isEnhanced) {

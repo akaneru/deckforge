@@ -9,7 +9,7 @@ class Amber extends Characteristic implements Analyzer {
   Stat parse(Deck deck) {
     Stat stat = Stat(
         key: StatsKeys.amberBonus,
-        name: 'Amber bonus',
+        name: 'Amber bonus cards',
         description: 'Total amber bonus');
     for (var card in deck.cards) {
       stat.valueInt += card.amber;

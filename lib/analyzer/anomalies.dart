@@ -9,7 +9,7 @@ class Anomalies extends Characteristic implements Analyzer {
   Stat parse(Deck deck) {
     Stat stat = Stat(
         key: StatsKeys.anomalies,
-        name: 'Anomalies cards number',
+        name: 'Anomalies cards',
         description: 'Number of anomalies cards');
     for (var card in deck.cards) {
       if (card.isAnomaly) {

@@ -10,7 +10,7 @@ class Creatures extends Characteristic implements Analyzer {
   Stat parse(Deck deck) {
     Stat stat = Stat(
         key: StatsKeys.creatures,
-        name: 'Creatures cards number',
+        name: 'Creatures cards',
         description: 'Number of creatures cards');
     for (var card in deck.cards) {
       if (card.cardType == CardsTypes.creature) {

@@ -9,7 +9,7 @@ class Maveriks extends Characteristic implements Analyzer {
   Stat parse(Deck deck) {
     Stat stat = Stat(
         key: StatsKeys.maveriks,
-        name: 'Maveriks cards number',
+        name: 'Maveriks cards',
         description: 'Number of maveriks cards');
     for (var card in deck.cards) {
       if (card.isMaverick) {

@@ -10,7 +10,7 @@ class Artifacts extends Characteristic implements Analyzer {
   Stat parse(Deck deck) {
     Stat stat = Stat(
         key: StatsKeys.artifacts,
-        name: 'Artifacts cards number',
+        name: 'Artifacts cards',
         description: 'Number of artifacts cards');
     for (var card in deck.cards) {
       if (card.cardType == CardsTypes.artifact) {
