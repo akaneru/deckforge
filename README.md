@@ -65,7 +65,5 @@ import 'package:deckforge/services/deck_analyzer.dart';
 
 ## Todo
 
-- finish all analyzer for stats
 - download command (json and image flags, iso2 language option)
-- license (in readme and file)
 - disclaimer (in readme and file)
