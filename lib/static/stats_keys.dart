@@ -12,5 +12,6 @@ enum StatsKeys {
   rarityCommon,
   rarityRare,
   rarityUncommon,
+  raritySpecial,
   rarityVariant
 }

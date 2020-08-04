@@ -1,4 +1,5 @@
 import 'package:deckforge/static/cards_types.dart';
+import 'package:deckforge/static/cards_rarity.dart';
 import 'package:deckforge/model/house.dart';
 
 class Card {
@@ -12,7 +13,7 @@ class Card {
   int amber;
   int power;
   int armor;
-  String rarity;
+  CardsRarity rarity;
   String flavorText;
   String cardNumber;
   int expansion;
@@ -49,7 +50,6 @@ class Card {
     amber = json['amber'] == null ? 0 : json['amber'];
     power = json['power'] == null ? 0 : int.parse(json['power']);
     armor = json['armor'] == null ? 0 : int.parse(json['armor']);
-    rarity = json['rarity'];
     flavorText = json['flavor_text'];
     cardNumber = json['card_number'];
     expansion = json['expansion'];
@@ -71,5 +71,24 @@ class Card {
         cardType = CardsTypes.artifact;
         break;
     }
+
+    switch (json['rarity']) {
+      case 'Rare':
+        rarity = CardsRarity.rare;
+        break;
+      case 'Common':
+        rarity = CardsRarity.common;
+        break;
+      case 'Uncommon':
+        rarity = CardsRarity.uncommon;
+        break;
+      case 'Special':
+        rarity = CardsRarity.special;
+        break;
+      case 'Variant':
+        rarity = CardsRarity.variant;
+        break;
+    }
+
   }
 }

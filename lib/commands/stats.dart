@@ -49,6 +49,11 @@ class StatsCommand extends Command {
           printStat(deck, StatsKeys.enhanced, [backgroundWhite, black, styleBold]);          
           printStat(deck, StatsKeys.anomalies, [backgroundGreen, black, styleBold]);
           printStat(deck, StatsKeys.maveriks, [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityCommon, [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityUncommon, [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityRare, [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.raritySpecial, [backgroundLightBlue, black, styleBold]);
+          printStat(deck, StatsKeys.rarityVariant, [backgroundLightBlue, black, styleBold]);
 
           print('');
         } else {
